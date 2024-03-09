@@ -62,18 +62,18 @@ if ENV:
     API_HASH = os.environ.get("API_HASH", None)
     ALLOW_CHATS = os.environ.get("ALLOW_CHATS", True)
     ALLOW_EXCL = os.environ.get("ALLOW_EXCL", False)
-    DB_URI = os.environ.get("DATABASE_URL")
+    SQL_URI= os.environ.get("DATABASE_URL")
     DEL_CMDS = bool(os.environ.get("DEL_CMDS", False))
     EVENT_LOGS = os.environ.get("EVENT_LOGS", None)
     INFOPIC = bool(os.environ.get("INFOPIC", "True"))
     MESSAGE_DUMP = os.environ.get("MESSAGE_DUMP", None)
     DB_NAME = os.environ.get("DB_NAME", "MikoDB")
     LOAD = os.environ.get("LOAD", "").split()
-    MONGO_DB_URI = os.environ.get("MONGO_DB_URI")
+    MONGO_URI = os.environ.get("MONGO_DB_URI")
     NO_LOAD = os.environ.get("NO_LOAD", "").split()
     STRICT_GBAN = bool(os.environ.get("STRICT_GBAN", True))
-    SUPPORT_ID = int(os.environ.get("SUPPORT_ID", "-100"))  # Support group id
-    SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", "Ecstasy_Realm")
+    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-100"))  # Support group id
+    SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", "GlobalAnimeCommunityOfficial")
     TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "./")
     TOKEN = os.environ.get("TOKEN", None)
 
@@ -89,23 +89,23 @@ if ENV:
         raise Exception("Your blacklisted chats list does not contain valid integers.")
 
     try:
-        DRAGONS = set(int(x) for x in os.environ.get("DRAGONS", "").split())
-        DEV_USERS = set(int(x) for x in os.environ.get("DEV_USERS", "").split())
+       AZURE_DRAGON = set(int(x) for x in os.environ.get("DRAGON", "").split())
+        JADE_EMPEROR = set(int(x) for x in os.environ.get("DEV_USER", "").split())
     except ValueError:
         raise Exception("Your sudo or dev users list does not contain valid integers.")
 
     try:
-        DEMONS = set(int(x) for x in os.environ.get("DEMONS", "").split())
+       WHITE_TIGER = set(int(x) for x in os.environ.get("TIGER", "").split())
     except ValueError:
         raise Exception("Your support users list does not contain valid integers.")
 
     try:
-        TIGERS = set(int(x) for x in os.environ.get("TIGERS", "").split())
+       VERMILION_BIRD = set(int(x) for x in os.environ.get("VERMILION", "").split())
     except ValueError:
         raise Exception("Your tiger users list does not contain valid integers.")
 
     try:
-        WOLVES = set(int(x) for x in os.environ.get("WOLVES", "").split())
+      BLACK_TORTOISE = set(int(x) for x in os.environ.get("TORTOISE", "").split())
     except ValueError:
         raise Exception("Your whitelisted users list does not contain valid integers.")
 else:
@@ -117,14 +117,14 @@ else:
     ALLOW_CHATS = Config.ALLOW_CHATS
     ALLOW_EXCL = Config.ALLOW_EXCL
     DB_NAME = Config.DB_NAME
-    DB_URI = Config.DATABASE_URL
+    SQL_URI = Config.SQL_URL
     MESSAGE_DUMP = Config.MESSAGE_DUMP
-    SUPPORT_ID = Config.SUPPORT_ID
+    LOG_CHANNEL= Config.LOG_CHANNEL
     DEL_CMDS = Config.DEL_CMDS
     EVENT_LOGS = Config.EVENT_LOGS
     INFOPIC = Config.INFOPIC
     LOAD = Config.LOAD
-    MONGO_DB_URI = Config.MONGO_DB_URI
+    MONGO_URI = Config.MONGO_URL
     NO_LOAD = Config.NO_LOAD
     STRICT_GBAN = Config.STRICT_GBAN
     SUPPORT_CHAT = Config.SUPPORT_CHAT
@@ -143,32 +143,30 @@ else:
         raise Exception("Your blacklisted chats list does not contain valid integers.")
 
     try:
-        DRAGONS = set(int(x) for x in Config.DRAGONS or [])
-        DEV_USERS = set(int(x) for x in Config.DEV_USERS or [])
+        AZURE_DRAGON = set(int(x) for x in Config.DRAGON or [])
+        JADE_EMPEROR= set(int(x) for x in Config.DEV_USER or [])
     except ValueError:
         raise Exception("Your sudo or dev users list does not contain valid integers.")
 
     try:
-        DEMONS = set(int(x) for x in Config.DEMONS or [])
+        VERMILION_BIRD = set(int(x) for x in Config.VERMILION or [])
     except ValueError:
         raise Exception("Your support users list does not contain valid integers.")
 
     try:
-        TIGERS = set(int(x) for x in Config.TIGERS or [])
+       WHITE_TIGER = set(int(x) for x in Config.TIGER or [])
     except ValueError:
         raise Exception("Your tiger users list does not contain valid integers.")
 
     try:
-        WOLVES = set(int(x) for x in Config.WOLVES or [])
+        BLACK_TORTOISE = set(int(x) for x in Config.TORTOISE or [])
     except ValueError:
         raise Exception("Your whitelisted users list does not contain valid integers.")
 # <======================================================================================================>
 
 # <================================================= SETS =====================================================>
-# Add OWNER_ID to the DRAGONS and DEV_USERS sets
-DRAGONS.add(OWNER_ID)
-DEV_USERS.add(OWNER_ID)
-DEV_USERS.add(5907205317)
+# Add OWNER_ID to the JADE_EMPEROR set
+JADE_EMPEROR.add(OWNER_ID)
 # <=======================================================================================================>
 
 # <============================================== INITIALIZE APPLICATION =========================================================>
