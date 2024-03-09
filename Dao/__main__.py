@@ -1,5 +1,4 @@
-# https://github.com/Infamous-Hydra/YaeMiko
-# https://github.com/Team-ProjectCodeX
+# https://github.com/imnotyoursuperman
 
 # <============================================== IMPORTS =========================================================>
 import asyncio
