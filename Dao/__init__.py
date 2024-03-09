@@ -177,20 +177,14 @@ function = dispatcher.add_handler
 
 # <================================================ BOOT MESSAGE=======================================================>
 ALIVE_MSG = """
-💫 *MY SYSTEM IS STARTING, PLEASE WAIT FOR SOMETIME TO COMPLETE BOOT!*
+💫 *THE SYSTEM IS STARTING UP, PLEASE WAIT FOR SOMETIME TO COMPLETE BOOT!*
 
 
 *IF COMMANDS DON'T WORK CHECK THE LOGS*
 """
 
 ALIVE_IMG = [
-    "https://telegra.ph/file/40b93b46642124605e678.jpg",
-    "https://telegra.ph/file/01a2e0cd1b9d03808c546.jpg",
-    "https://telegra.ph/file/ed4385c26dcf6de70543f.jpg",
-    "https://telegra.ph/file/33a8d97739a2a4f81ddde.jpg",
-    "https://telegra.ph/file/cce9038f6a9b88eb409b5.jpg",
-    "https://telegra.ph/file/262c86393730a609cdade.jpg",
-    "https://telegra.ph/file/33a8d97739a2a4f81ddde.jpg",
+    "https://raw.githubusercontent.com/imnotyoursuperman/XiaoDao/main/Dao/modules/files/20240229_120307.jpg",
 ]
 # <=======================================================================================================>
 
@@ -201,14 +195,14 @@ async def send_booting_message():
 
     try:
         await bot.send_photo(
-            chat_id=SUPPORT_ID,
+            chat_id=LOGGER_CHANNEL,
             photo=str(choice(ALIVE_IMG)),
             caption=ALIVE_MSG,
             parse_mode=ParseMode.MARKDOWN,
         )
     except Exception as e:
         LOGGER.warning(
-            "[ERROR] - Bot isn't able to send a message to the support_chat!"
+            "[ERROR] - Bot isn't able to send a message to the log channel!"
         )
         print(e)
 
@@ -224,7 +218,7 @@ loop.run_until_complete(
 
 # <=============================================== CLIENT SETUP ========================================================>
 # Create the Mikobot and TelegramClient instances
-app = Client("Mikobot", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
+app = Client("XiaoDao", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 tbot = TelegramClient(MemorySession(), API_ID, API_HASH)
 # <=======================================================================================================>
 
@@ -239,11 +233,11 @@ BOT_USERNAME = dispatcher.bot.username
 # <================================================== CONVERT LISTS =====================================================>
 # Convert sets to lists for further use
 SUPPORT_STAFF = (
-    [int(OWNER_ID)] + list(DRAGONS) + list(WOLVES) + list(DEMONS) + list(DEV_USERS)
+    [int(OWNER_ID)] + list(AZURE_DRAGON) + list(BLACL_TORTOISE) + list(VERMILION_BIRD) + list(JADE_EMPEROR) + list(WHITE_TIGER)
 )
-DRAGONS = list(DRAGONS) + list(DEV_USERS)
-DEV_USERS = list(DEV_USERS)
-WOLVES = list(WOLVES)
-DEMONS = list(DEMONS)
-TIGERS = list(TIGERS)
+AZURE_DRAGON = list(DRAGON)
+JADE_EMPEROR = list(DEV_USER)
+BLACL_TORTOISE = list(TORTOISE)
+VERMILION_BIRD = list(VERMILION)
+WHITE_TIGER= list(TIGER)
 # <==================================================== END ===================================================>
