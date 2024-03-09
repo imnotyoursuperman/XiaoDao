@@ -3,5 +3,5 @@
 </div>
 
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?color=DC143C&center=true&lines=â”€â”€+ã€Œ+XIAO+DAO+ã€+â”€â”€;The+Heavenly+Bot.&width=600&height=180">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=F7BE24&random=false&width=435&lines=%5B+Xiao+Dao+%5D;The+Heavenly+Bot.&width=600&height=180">
 </div>
