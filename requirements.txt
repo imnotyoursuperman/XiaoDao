@@ -1,0 +1,78 @@
+# ==== A ====
+aiofiles
+aiohttp
+APScheduler
+alphabet-detector
+asyncio
+
+# ==== B ====
+beautifulsoup4
+bleach
+
+# ==== C ====
+cachetools
+
+# ==== D ====
+dateparser
+
+# ==== E ====
+emoji
+emoji-country-flag
+
+# ==== F ====
+ffmpeg-python
+future
+
+# ==== G ====
+gpytranslate
+
+# ==== H ====
+html2text
+httpx[http2]
+humanize
+
+# ==== J ====
+jikanpy
+
+# ==== L ====
+lxml
+
+# ==== M ====
+markdown2
+motor
+
+# ==== N ====
+nekos.py
+
+# ==== O ====
+opencv-python-headless
+
+# ==== P ====
+Pillow
+psutil
+pyjokes
+psycopg2-binary
+pynewtonmath
+pymongo[srv]
+pyrate-limiter
+pytz
+python-arq
+pyrogram
+python-telegram-bot
+
+# ==== R ====
+regex
+requests
+
+# ==== S ====
+shortuuid
+SQLAlchemy
+speedtest-cli
+
+# ==== T ====
+telegraph
+telethon
+tgcrypto
+
+# ==== U ====
+Unidecode
